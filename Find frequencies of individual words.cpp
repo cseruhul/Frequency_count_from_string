@@ -15,6 +15,17 @@ Output: Frequencies of individual words are
 #include<bits/stdc++.h>
 using namespace std;
 
+void count_word_frequency(string str){
+    stringstream strstream(str);    //converting the string into stringstream
+    unordered_map<string, int>mp;   //Declaration of a unordered map to store word frequency
+    string word;                    //Declaration of a string name word
+
+    while(strstream >> word){
+        mp[word]++;
+    }
+    map_output(mp);
+}
+
 int main(){
     string str = "geeks for geeks geeks quiz practice qa for";
 
